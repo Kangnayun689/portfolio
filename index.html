@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강나윤의 포트폴리오 입니다</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //헤더 
+            $(".gnb>li").click(function(){
+                let index = $(this).index();
+                let targetSection = $("#section>div").eq(index); 
+
+                $("html, body").animate({
+                    scrollTop: targetSection.offset().top
+                }, 600);
+            });
+
+            //ABOUT 탭메뉴  
+            $(".tool_botton>li").click(function(){
+                let list = $(this).index();
+
+                $(".tool_in>li").hide();                            
+                $(".tool_in>li").eq(list).show();      
+                
+                $(".tool_botton>li").removeClass("de"); 
+                $(".tool_botton>li").eq(list).addClass("de");
+            });   
+            
+            //WORK 탭메뉴  
+            $(".work_botton>li").click(function(){
+                let list = $(this).index();
+
+                $(".work_in>li").hide();                            
+                $(".work_in>li").eq(list).show();      
+                
+                $(".work_botton>li").removeClass("de"); 
+                $(".work_botton>li").eq(list).addClass("de");
+            });  
+                    
+
+
+            // .work_in .design 모달
+            $(".work_in .design > ul > li").click(function (e) {
+                e.preventDefault(); 
+                let index = $(this).index(); 
+                $(".de_modal > li").hide(); 
+                $(".de_modal > li").eq(index).show(); 
+            });
+
+            // .work_in .design 모달 닫기
+            $(".de_modal .close").click(function () {
+                $(this).closest(".de_modal>li").hide(); 
+            });
+
+            //TOP 버튼
+            $(".TOP").click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <ul class="gnb">
+            <li><a href="#">HOME</a><p></p></li>
+            <li><a href="#">ABOUT</a><p></p></li>
+            <li><a href="#">WORK</a><p></p></li>
+        </ul>
+    </div>
+    <div id="section">
+        <!-- home -->
+        <div class="home">
+            <div>
+                <h1>PORTFOLIO.</h1>
+                <h1>P<span>O</span>RTFOLIO.</h1>
+                <h1>P<span>O</span>RTFOLIO.</h1>
+            </div>
+            <ul>
+                <li><img src="images/fi_cir_1.png" alt=""></li>
+                <li><img src="images/fi_cir_2.png" alt=""></li>
+            </ul>
+        </div>
+
+        <!-- about -->
+        <div class ="about">
+            <h2>ABOUT</h2>
+            <div class="ab_main">
+                <ul class="id_pho">
+                    <li><img src="images/ab_face.png" alt=""></li>
+                    <li>강나윤 / 여성 / 96년생</li>
+                </ul>
+                <ul class="text">
+                    <li>
+                        <h3>지원분야</h3>
+                        웹디자인(신입), 웹 퍼블리셔(신입)
+                    </li>
+                    <li>
+                        <h3>자격증</h3>
+                        GTQ 2급 <br> GTQI 2급 <br> ITQ(한글, 엑셀, ppt)
+                    </li>
+                    <li>
+                        <h3>경력</h3>
+                        <ul>
+                            <li>백두문화재연구원 <span>( 2020.02 ~ 2021.04 )</span><p>유물관리 및 출판 보조</p></li>
+                            <li>화정 컴퓨터 랜드 <span>( 2018.11 ~ 2019.12 )</span><p>캐릭터 디자인</p></li>
+                            <li>국제 디자인 트렌드대전 입선 <span>( 2018.07 )</span></li>
+                            <li>드림써치 씨앤씨 <span>( 2017.06 ~ 2017.08 )</span><p>사무보조</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>메일</h3>
+                        abcvava96@gmail.com
+                    </li>
+                    <li>
+                        <ul class="tool_botton">
+                            <li class = "de">Design</li>
+                            <li>Coding</li>
+                        </ul>
+                        <ul class="tool_in">
+                            <li class="Design">
+                                <ul>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                </ul>
+                            </li>
+                            <li class="Coding">
+                                <ul>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                    <li><p></p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- WORK -->
+        <div class ="work">
+            <h2>WORK</h2>
+            <ul class="work_botton">
+                <li class="de">Design</li>
+                <li>Coding</li>
+            </ul>
+            <ul class="work_in">
+                <li class="design">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <ul>
+                                    <li class = "de_box"></li>
+                                    <li>상세페이지 모작</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <ul>
+                                    <li class = "de_box"></li>
+                                    <li>배너 모작</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <ul>
+                                    <li class = "de_box"></li>
+                                    <li>배너 모작</li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="coding">
+                    <ul>
+                        <li>
+                            <a href="https://kangnayun689.github.io/kitchenart/" target="_blank">
+                                <ul>
+                                    <li class="co_box"><p></p></li>
+                                    <li>redesign</li>
+                                    <li>키친아트 - 메인페이지</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://madgranny1123.github.io/pascucci/heritage.html" target="_blank">
+                                <ul>
+                                    <li class="co_box"><p></p></li>
+                                    <li>redesign</li>
+                                    <li>파스쿠찌 - 서브페이지</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kangnayun689.github.io/soyjoy/" target="_blank">
+                                <ul>
+                                    <li class="co_box"><p></p></li>
+                                    <li>clone coding</li>
+                                    <li>소이조이</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kangnayun689.github.io/EDIYA/" target="_blank">
+                                <ul>
+                                    <li class="co_box"><p></p></li>
+                                    <li>clone coding</li>
+                                    <li>이디야</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kangnayun689.github.io/mega/" target="_blank">
+                                <ul>
+                                    <li class="co_box"><p></p></li>
+                                    <li>clone coding</li>
+                                    <li>메가커피</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kangnayun689.github.io/erom/" target="_blank">
+                                <ul>
+                                    <li class="co_box"><p></p></li>
+                                    <li>clone coding</li>
+                                    <li>이롬</li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="de_modal">
+                <li>
+                    <ul>
+                        <li>
+                            <img src="images/agro.png" alt="">
+                        </li>
+                        <li>
+                            <ul class="close">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <img src="images/spr.png" alt="">
+                        </li>
+                        <li>
+                            <ul class="close">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <img src="images/ta.png" alt="">
+                        </li>
+                        <li>
+                            <ul class="close">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- top 버튼 -->
+        <div class="TOP">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THANK YOU!</h2>
+    </div>
+</body>
+</html>
