@@ -406,19 +406,6 @@ img{border: 0; vertical-align: top;}
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* top 버튼 */
 #section .TOP{
     width: 54px;
@@ -463,6 +450,9 @@ img{border: 0; vertical-align: top;}
 
 /* 모바일용 반응형 */
 @media all and (max-width: 500px){
+    body{
+        width: 500px;
+    }
     #header{
         justify-content: center;
         width: calc(100% - 0px);
@@ -474,13 +464,27 @@ img{border: 0; vertical-align: top;}
         width: 120px;
     }
     /* home */
+    #section .home{
+        overflow: hidden;
+    }
     #section .home div{
-        padding-top: 0px;
-        padding-left: 0px;
+        padding-top: 97px;
+        padding-left: 43px;
     }
     #section .home div h1{
-        writing-mode: vertical-lr;
         line-height: calc(100% - 0px);
+        -webkit-text-stroke: 0.2px #ffffff;
+        line-height: calc(100% - 123px);
+        writing-mode: vertical-lr;
+    }
+    #section .home div :nth-child(n+2){
+    display: none;
+    }
+    #section .home ul li:nth-of-type(1){
+        display: none;
+    }
+    #section .home ul li:nth-of-type(2){
+        display: none;
     }
     /* about */
     #section .about{
@@ -490,6 +494,7 @@ img{border: 0; vertical-align: top;}
         margin-left: 0px;
         padding-top: 60px;
         text-align: center;
+        -webkit-text-stroke: 0.2px rgba(100, 143, 100, 1);
     }
     #section .about .ab_main{
         display: grid;
@@ -507,6 +512,7 @@ img{border: 0; vertical-align: top;}
         margin-left: 0px;
         padding-top: 60px;
         text-align: center;
+        -webkit-text-stroke: 0.2px rgba(100, 143, 100, 1);
     }
     #section .work .work_in>li>ul{
         width: calc(100% - 0px);
@@ -516,6 +522,20 @@ img{border: 0; vertical-align: top;}
     #section .work .de_modal>li>ul{ 
         width: 380px;
     }
+    #section .work .work_in>li>ul>li a ul .box{
+        width: 255px;
+        height: 150px;
+    }
+    /* top 버튼 */
+    #section .TOP{
+        top: 90%; left: 80%;
+    }
+
+
+
+
+
+
 }
 
 
