@@ -331,6 +331,10 @@ img{border: 0; vertical-align: top;}
 #section .work .work_in .design>ul>li:nth-of-type(5) a ul .box{
     background-image: url(../images/summ.png);
 }
+#section .work .work_in .design>ul>li:nth-of-type(6) a ul .box{
+    background-image: url(../images/wabD.png);
+}
+
 
 #section .work .work_in .coding{
     display: none;
@@ -390,6 +394,11 @@ img{border: 0; vertical-align: top;}
 #section .work .de_modal>li:nth-of-type(5)>ul{
     overflow-y: scroll;
     height: 800px;
+}
+#section .work .de_modal>li:nth-of-type(6)>ul{
+    width: 80%;
+    height: 80%;
+    overflow-y: scroll;
 }
 #section .work .de_modal>li>ul>li .close{
     width: 26px;
@@ -518,13 +527,29 @@ img{border: 0; vertical-align: top;}
         width: calc(100% - 0px);
         justify-content: center;
     }
-    /* 모달 스타일 */
-    #section .work .de_modal>li>ul{ 
-        width: 380px;
-    }
     #section .work .work_in>li>ul>li a ul .box{
         width: 255px;
         height: 150px;
+    }
+    /* 모달 스타일 */
+    #section .work .de_modal>li:nth-of-type(1)>ul{
+        overflow-y: auto;
+        height: auto;
+    }
+    #section .work .de_modal>li:nth-of-type(2)>ul{
+        overflow-y: auto;
+        height: auto;
+    }
+    #section .work .de_modal>li:nth-of-type(3)>ul{
+        overflow-y: auto;
+        height: auto;
+    }    
+    #section .work .de_modal>li:nth-of-type(5)>ul{
+        overflow-y: auto;
+        height: auto;
+    }    
+    #section .work .de_modal>li>ul>li img{ 
+        width: 80%;
     }
     /* top 버튼 */
     #section .TOP{
